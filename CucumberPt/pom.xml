@@ -13,7 +13,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
- 
+  
   <dependencies>
 		<dependency>
 			<groupId>info.cukes</groupId>
@@ -28,7 +28,7 @@
 			<version>1.2.5</version>
 			<type>pom</type>
 		</dependency>
-
+ <!--  -->
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-junit</artifactId>
@@ -85,6 +85,7 @@
 	  </dependencies>	
 <!--  BUILD PLUGINS -->	  
     <build>
+    <pluginManagement>
     <plugins>
 <!-- START Of Plugins -->
 <!-- Adding maven compiler plugin and sure fire plugin is mandatory-->
@@ -106,12 +107,11 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.20.1</version>
           <configuration>
-           <includes>
-           <exclude>TestRunner.java</exclude>
-           </includes>
+           <includes>TestRunner.java</includes>
           </configuration>
       </plugin>
         <!-- END Of Plugins -->
     </plugins>
+  </pluginManagement>  
 </build>
 </project>
